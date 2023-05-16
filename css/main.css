@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+input{
+    width: 100px;
+    height: 30px;
+    transition: 0.7s;
+}
+input:focus{
+    background-color: #aaa;
+    color: #fff;
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+}
+#chk{
+    width: 20px;
+    height: 20px;
+
+}
+#chk:checked ~ input{
+    width: 50px;
+    height: 50px;
+}
+#link{
+    color: #333;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#link:hover{
+    background-color: lightblue;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fafafa;
+    text-decoration: line-through;
+    text-shadow: 2px 2px 5px black;
+}
+#link:active{
+    background-color: blue;
+}
+p::selection{
+    background-color: rgba(26, 157  , 233, 0.5);
+    color: blueviolet;
+}
+p::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: coral;
+}
+/* 그라데이션 국룰 */
+span{
+    font-family: 900;
+    color: #2aaeeb;
+    position: relative;
+}
+span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0px;
+    height: 5px;
+    background: linear-gradient(to right, #f12711,#037e3a);
+    transition: width 0.3s ease-in-out;
+}
+p:hover span::after{
+    width: 100%;
+    transition: width 0.3s;
+}
